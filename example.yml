@@ -1,0 +1,26 @@
+----
+- name: example playbook
+  host: all
+  var:
+   myvar: "example text"
+  
+  task:
+    -name: print var
+    ansible.builtin.debug:
+      msg: "value {{ myvar }}"
+    notify: reload  
+
+   - name: condition
+     ansible.builtin.debug:
+       msg: "example condition"
+     when: mybool
+
+  - name: print cities
+    ansible.builtin.debug:
+      var: item
+    loop: "{{ cities}}"
+
+handlers:
+  - name: reload
+    ansible.builtin.debug:
+      msg: "example handler" 

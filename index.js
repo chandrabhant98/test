@@ -28,4 +28,4 @@ function convertTemperature(temperature, unitFrom, unitTo) {
 
   let fahrenheitTemp = 68;
 let convertedTemp = convertTemperature(fahrenheitTemp, "Fahrenheit", "Celsius");
-console.log(convertedTemp); // Output: 20
+console.log(convertedTemp); // Output: 20 20
